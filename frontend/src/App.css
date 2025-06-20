@@ -1,0 +1,289 @@
+/* ===== Base Container ===== */
+.landingPageContainer {
+  width: 100vw;
+  min-height: 100vh;
+  background: url('../public/background.png') no-repeat center center/cover;
+  color: white;
+  overflow: hidden;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Navbar Styles ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.navHeader h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+  color: white;
+}
+
+/* Desktop Nav List */
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navList p {
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navList p:hover {
+  color: #ffb46a;
+}
+
+.navList div[role="button"] {
+  background-color: #D97500;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.navList div[role="button"] p {
+  margin: 0;
+  color: white;
+  font-weight: 500;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburgerMenu {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  position: relative;
+  color: white;
+}
+
+.hamburgerMenu .dropdown {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 1000;
+  min-width: 150px;
+}
+
+.hamburgerMenu:hover .dropdown {
+  display: flex;
+}
+
+.hamburgerMenu .dropdown p {
+  margin: 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+.hamburgerMenu .dropdown p:hover {
+  background-color: #f2f2f2;
+}
+
+/* ===== Main Content Styles ===== */
+.landingMainContainer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.landingMainContainer > div:nth-child(1) {
+  flex: 1;
+  min-width: 260px;
+  font-size: 1.6rem;
+}
+
+.landingMainContainer > div:nth-child(1) h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.landingMainContainer > div:nth-child(1) p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] {
+  background-color: #D97500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+/* Image Container */
+.landingMainContainer .mobile img {
+  height: 60vh;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .navList {
+    display: none; /* Hide nav items on mobile */
+  }
+
+  .hamburgerMenu {
+    display: block; /* Show hamburger on mobile */
+  }
+
+  .landingMainContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) h1 {
+    font-size: 2rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) p {
+    font-size: 1rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] a {
+    font-size: 1.1rem;
+  }
+
+  .landingMainContainer .mobile img {
+    height: auto;
+    width: 80%;
+    margin-top: 2rem;
+  }
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  padding-block: 8px;
+  text-align: center;
+  border-bottom:1px solid rgb(210, 205, 205);
+}
+/* Container styles */
+.meetContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+  gap: 2rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* Left panel (text, input, button) */
+.leftPanel {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+/* Heading */
+.leftPanel h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Input */
+.meetingInput {
+  width: 100%;
+}
+
+/* Button */
+.joinButton {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Right panel (image) */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightPanel img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .meetContainer {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+  }
+
+  .leftPanel h2 {
+    font-size: 1.5rem;
+  }
+
+  .joinButton {
+    max-width: 100%;
+  }
+
+  .rightPanel img {
+    max-width: 90%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftPanel h2 {
+    font-size: 1.3rem;
+  }
+
+  .meetContainer {
+    padding: 1rem 0.5rem;
+  }
+
+  .rightPanel img {
+    max-width: 100%;
+  }
+}
